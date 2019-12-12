@@ -51,9 +51,9 @@ if __name__ == "__main__":
     value_computations = delta_average()
     delta = sum([float(a) for a in value_computations.values()])/(len(value_computations))
     max_increase = max(value_computations.values())
-    max_increase_year = [val_get[0] for val_get in value_computations.items() if val_get[1] == max_increase]
+    max_increase_year = [k for k,v in value_computations.items() if v == max_increase]
     min_increase = min(value_computations.values())
-    min_increase_year = [val_get[0] for val_get in value_computations.items() if val_get[1] == min_increase]
+    min_increase_year = [k for k,v in value_computations.items() if v == min_increase]
     
     print('Financial Analysis')
     print('----------------------------\n')
