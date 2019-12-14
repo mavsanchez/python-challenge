@@ -9,7 +9,7 @@ import os, csv
 
 def read_file():
     dict_holder = {}
-    csv_path = os.path.join ("Resources","election_data_original.csv")    
+    csv_path = os.path.join ("Resources","election_data.csv")    
     with open(csv_path, newline='', encoding="utf-8") as csv_file:
         next(csv.reader(csv_file)) #Skip the header/Move cursor
         for row in csv.reader(csv_file):
@@ -19,7 +19,7 @@ def read_file():
 
    
 def write_file():
-    output_path = os.path.join( "budget_summary.csv")
+    output_path = os.path.join( "election_data_summary.csv")
     
     with open(output_path, "w", newline='', encoding="utf-8") as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=",")
